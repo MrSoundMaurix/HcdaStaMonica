@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hacienda Santa Mónica</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            position: inherit;
+            top: 0px;
+            bottom: 0px;
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <style>
+        .mapboxgl-popup {
+            max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <div class="container">
+            <img src="images/Logo_UTN. Acreditada.png" alt="logo" style="width: 8%;margin-right: 15px;">
+            <a class="navbar-brand" href="index.html"> Hcda. Santa Mónica - Universidad Técnica del Norte</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gis.html">Proyectos GIS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Instalaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galería</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="images/software.jfif" alt="logo" style="width: 5%;">
+
+        </div>
+    </nav>
+
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1>Proyecto de investigación GIS</h1>
+        <h1>Proyecto de investigación GIS</h1>
+        <h3>Mapbox Hcda.Santa Mónica</h3>
+
+        <div class="container" id="map"></div>
+
+
+        <hr>
+
+        <div class="row">
+            <!-- Footer -->
+            <footer class="container py-5" style="background-color: #4c4745;">
+                <div class="row">
+                    <div class="col-lg-4" style="border-right: 1px solid #ddd;">
+
+                        <p class="text-white text-monospace text-justify text-decoration-none"> <img src="images/Logo_UTN. Acreditada.png" alt=""> Todos los contenidos digitales del Portal Web: www.utn.edu.ec, se prohiben, su reproducción total, parcial y traducción a cualquier idioma, sin autorización escrita de su titular.
+                        </p>
+                        <p class="m-0 text-center text-white">
+
+                            Copyright &copy; 2020
+                            <strong> <a class="text-danger text-decoration-none" target="_blank" href="https://www.utn.edu.ec/web/uniportal/">Universidad Técnica del Norte</a> </p>
+           </strong>
+                    </div>
+                    <div class="col-lg-4" style="border-right: 1px solid #ddd;">
+                        <h4 class="text-white">ACCESOS DIRECTOS</h4>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none sobre" target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2015">NUESTRO CAMPUS</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/internacional/">INTERNACIONAL</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=1894">VINCULACIÓN</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2018">INFORMES DE GESTIÓN</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://cloud1.utn.edu.ec/ords/f?p=224:3">UTN EN CIFRAS</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://cloud1.utn.edu.ec/ords/f?p=224:3">TRANSPARENCIA</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/oficinaestudiante/">OFICINA DEL ESTUDIANTE</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2198">GRADO</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2273">POSTGRADO</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="http://www.utn.edu.ec/colegio/">COLEGIO UTN</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=1892">INVESTIGACIÓN</a>
+                                    </li>
+                                    <li class="text-white sobre">
+                                        <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/bibliotecavirtual/">BIBLIOTECA UNIVERSITARIA</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <h4 class="text-white">CONTÁCTANOS</h4>
+                        <br>
+                        <i class="fa fa-phone text-white"></i><strong class="text-white">  +593 (6) 2-997 800</strong>
+                        <br>
+                        <i class="fa fa-home text-white"></i><strong class="text-white">  Avenida 17 de Julio, 5-21, y Gral. José María Cordova. <p>
+            Código Postal: 100105  
+        </p>
+    <p>
+        Ibarra, Ecuador // <a class="text-decoration-none text-danger" target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=1904">ver mapa</a>
+    </p></strong>
+                        <hr>
+                        <i class="fa fa-envelope text-white"></i><strong class="text-white"> <a class="text-decoration-none text-danger" target="_blank" href="mailto:info@utn.edu.ec">info@utn.edu.ec</a>
+        </strong>
+
+                    </div>
+
+
+
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+    </div>
+    <!-- /.container -->
+
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamZnYXJyaWRvcyIsImEiOiJjazVoYjk0dmowMXpkM2twN3I5Z3B5OHNmIn0.EsQOTGM8tp4NtPA-TRuNYg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/jfgarridos/ck68p7u101itz1ir47nhdgfhk',
+            center: [-78.24437, 0.29376],
+            zoom: 13.15
+        });
+
+        map.on('load', function() {
+            map.addSource('places', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [{
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Make it Mount Pleasant</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+                            'icon': 'theatre'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.038659, 38.931567]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a <a href="http://madmens5finale.eventbrite.com/" target="_blank" title="Opens in a new window">Mad Men Season Five Finale Watch Party</a>, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>',
+                            'icon': 'theatre'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.003168, 38.894651]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Big Backyard Beach Bash and Wine Fest</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a <a href="http://tallulaeatbar.ticketleap.com/2012beachblanket/" target="_blank" title="Opens in a new window">Big Backyard Beach Bash and Wine Fest</a> on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.grill hot dogs.</p>',
+                            'icon': 'bar'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.090372, 38.881189]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Ballston Arts & Crafts Market</strong><p>The <a href="http://ballstonarts-craftsmarket.blogspot.com/" target="_blank" title="Opens in a new window">Ballston Arts & Crafts Market</a> sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>',
+                            'icon': 'art-gallery'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.111561, 38.882342]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Seersucker Bike Ride and Social</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year\'s <a href="http://dandiesandquaintrelles.com/2012/04/the-seersucker-social-is-set-for-june-9th-save-the-date-and-start-planning-your-look/" target="_blank" title="Opens in a new window">Seersucker Social</a> bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>',
+                            'icon': 'bicycle'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.052477, 38.943951]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Capital Pride Parade</strong><p>The annual <a href="http://www.capitalpride.org/parade" target="_blank" title="Opens in a new window">Capital Pride Parade</a> makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>',
+                            'icon': 'rocket'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.043444, 38.909664]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist <a href="http://www.muhsinah.com" target="_blank" title="Opens in a new window">Muhsinah</a> plays the <a href="http://www.blackcatdc.com">Black Cat</a> (1811 14th Street NW) tonight with <a href="http://www.exitclov.com" target="_blank" title="Opens in a new window">Exit Clov</a> and <a href="http://godsilla.bandcamp.com" target="_blank" title="Opens in a new window">Gods’illa</a>. 9:00 p.m. $12.</p>',
+                            'icon': 'music'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.031706, 38.914581]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>A Little Night Music</strong><p>The Arlington Players\' production of Stephen Sondheim\'s  <a href="http://www.thearlingtonplayers.org/drupal-6.20/node/4661/show" target="_blank" title="Opens in a new window"><em>A Little Night Music</em></a> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>',
+                            'icon': 'music'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.020945, 38.878241]
+                        }
+                    }, {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Truckeroo</strong><p><a href="http://www.truckeroodc.com/www/" target="_blank">Truckeroo</a> brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>',
+                            'icon': 'music'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-77.007481, 38.876516]
+                        }
+                    }]
+                }
+            });
+            // Add a layer showing the places.
+            map.addLayer({
+                'id': 'places',
+                'type': 'symbol',
+                'source': 'places',
+                'layout': {
+                    'icon-image': '{icon}-15',
+                    'icon-allow-overlap': true
+                }
+            });
+
+            // When a click event occurs on a feature in the places layer, open a popup at the
+            // location of the feature, with description HTML from its properties.
+            map.on('click', 'places', function(e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+
+                // Ensure that if the map is zoomed out such that multiple
+                // copies of the feature are visible, the popup appears
+                // over the copy being pointed to.
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+            });
+
+            // Change the cursor to a pointer when the mouse is over the places layer.
+            map.on('mouseenter', 'places', function() {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'places', function() {
+                map.getCanvas().style.cursor = '';
+            });
+        });
+    </script>
+
+
+
+    <hr>
+
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

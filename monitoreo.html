@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Monitoreo Hacienda Santa Mónica</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css" type="text/css">
+
+    <style>
+        .map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <div class="container">
+            <img src="images/Logo_UTN. Acreditada.png" alt="logo" style="width: 8%;margin-right: 15px;">
+            <a class="navbar-brand" href="index.html"> Hcda. Santa Mónica - Universidad Técnica del Norte</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gis.html">Proyectos GIS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Instalaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galería</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="images/software.jfif" alt="logo" style="width: 5%;">
+
+        </div>
+    </nav>
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h1>Proyecto de investigación GIS</h1>
+            </div>
+
+            <div class="col-md-2 mt-3"> <a class="text-decoration-none btn btn-primary bg-red" href="https://eos.com/crop-monitoring/main-map/fields/6800864" target="_blank">Iniciar Sesión</a>
+
+                <br> </div>
+        </div>
+
+
+        <div id="map" class="map"></div>
+
+    </div>
+    <!-- /.container -->
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Área de estudio</h3>
+                <p class="text-justify">
+                    La Universidad Técnica del Norte como muchas Instituciones tecnológicas y educativas cuentan con escenarios tanto deportivos, culturales, agropecuarios, académicos, de investigación y tecnológicos. Uno de los escenarios que destaca en la UTN es la hacienda
+                    Santa Mónica con un perímetro de 106.7 hectáreas mismo que en la actualidad son destinados a la siembra de pastizales y forrajes alrededor de 160 vacas lecheras. La hacienda Santa Mónica es considerado como uno de los tantos terrenos
+                    que se encuentran en las vías panamericanas y no son ubicadas en la georreferencia global, dado este problema se considera establecer puntos de referencias geográfica tanto como vías, predios, calles, terrenos y todo el área y perímetro
+                    relacionado a la hacienda. La Hacienda ha enfrentado diversos cambios desde la adjudicación del 7 de julio del 2011, estos cambios han constituido una mejora continua que han sido favorecidas por factores internos como externos, además
+                    de ello se ha aprovechado de la infraestructura, maquinarias y equipo, clientes, procesos e imagen corporativa dejadas por el anterior dueño de la Hacienda, en esencia referente a la calidad lechera y especie de ganado vacuno existente.
+                    (CARVAJAL, 2015) La extensiva área de la hacienda promueve la referenciación de diferentes terrenos ya que el área es calculada por hectáreas y un 90% agrícola que por ende permite el crecimiento de vacas y producción de leche.
+
+                </p>
+                <hr>
+                <h3>Área y perímetro de lotes hacienda Santa Mónica</h3>
+                <p class="text-justify">El uso actual de la Tierra es de altura con riego, exclusivamente para Pastoreo Controlado o Rotativo Intensivo de Vacunos. La frecuencia de permanencia del ganado en un solo lugar depende de la existencia y calidad del pasto. La predominancia
+                    de uso pastoril se encuentra en los extremos sur oeste y sur este del área de estudio, particularmente, en las partes bajas y en laderas donde se hallan establecidos importantes hatos de ganado vacuno. El área de estudio se encuentra
+                    en combinación con áreas en descanso destinadas a pastoreo en el extremo sur (lote 5, 6 y 7), donde los vacunos son pastoreados en redileo .</p>
+                <img src="images/tablaHcdaSantaMonica.PNG" class="w-75" alt="">
+                <hr>
+                <h3>Mapa Isoyetas del Ecuador con indicación área de estudio</h3>
+                <p class="text-justify">De acuerdo con el estudio de la Zonificación Agroecológica del área de estudio comprendido entre Pinsaquí y peaje de San Roque, se han identificado problemas, tales como heladas, granizadas, sequías, las cuales dificultan el desarrollo
+                    de los cultivos ocasionando cuantiosas pérdidas, especialmente en la hacienda que requiere para el pastoreo debido a su dedicación a la producción lechera.</p>
+                <img src="images/historicaEcuador.png" class="w-100" alt="">
+                <br>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <h3>Ubicación</h3>
+                <p class="text-justify">
+                    El área de estudio se encuentra en el sector de Ilumán perteneciente al cantón Otavalo, a 100 metros del peaje de San Roque, ubicado en -78.24360 de longitud este y 0.28810 de latitud norte Esta hacienda está localizada principalmente en laderas, y se
+                    extiende en la parte central y sur del área de estudio. Abarca los siete lotes según muestra la figura 2. y el cuadro 1. que indica el área y perímetro de cada uno.
+                </p>
+                <img src="images/StaMonicaMapaColor.PNG" class="w-100 align-center" alt="">
+
+                <hr>
+                <h3>Clima</h3>
+                <p class="text-justify">
+                    El clima del área de estudio corresponde a ecuatorial mesotérmico semi húmedo, con variaciones extremas entre el día y la noche, cuya temperatura media anual promedio es de aproximadamente de 15ºC, siendo la mínima promedio de 9ºC y máxima de 20ºC, ver
+                    figura 3. Por su situación geográfica y altura, recibe una mayor cantidad de energía solar que una superficie similar ubicada a nivel del mar. Por su ubicación en la latitud cero, permite que la irradiación solar global alcance valores
+                    elevados durante todo el año, con un promedio anual de 533 cal/cm2/día.
+                </p>
+                <img src="images/climaIluman.PNG" class="w-100" alt="">
+                <hr>
+                <h3>Precipitaciones Pluviales</h3>
+                <p class="text-justify">
+                    La pluviométrica media anual en esta región es de 852,8 mm (INAMHI, 2018), distribuida en dos épocas de lluvias (enero a junio y septiembre a diciembre), los meses secos se presentan en julio y agosto; la humedad relativa entre 65 y 85% (INAMHI, 2018),
+                    no obstante, también existen sectores con baja humedad. La velocidad del viento promedio es de 3 km/h. El mes más seco es julio, con 16 mm de lluvia, y abril es el mes más cálido del año, y julio es el mes más frío del año.
+                </p>
+                <img src="images/precipitacionesPluviales.PNG" class="w-100" alt="">
+                <hr>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="container py-5" style="background-color: #4c4745;">
+        <div class="row">
+            <div class="col-lg-4" style="border-right: 1px solid #ddd;">
+
+                <p class="text-white text-monospace text-justify text-decoration-none"> <img src="images/Logo_UTN. Acreditada.png" alt=""> Todos los contenidos digitales del Portal Web: www.utn.edu.ec, se prohiben, su reproducción total, parcial y traducción a cualquier idioma, sin autorización escrita de su titular.
+                </p>
+                <p class="m-0 text-center text-white">
+
+                    Copyright &copy; 2020
+                    <strong> <a class="text-danger text-decoration-none" target="_blank" href="https://www.utn.edu.ec/web/uniportal/">Universidad Técnica del Norte</a> </p>
+               </strong>
+            </div>
+            <div class="col-lg-4" style="border-right: 1px solid #ddd;">
+                <h4 class="text-white">ACCESOS DIRECTOS</h4>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none sobre" target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2015">NUESTRO CAMPUS</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/internacional/">INTERNACIONAL</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=1894">VINCULACIÓN</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2018">INFORMES DE GESTIÓN</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://cloud1.utn.edu.ec/ords/f?p=224:3">UTN EN CIFRAS</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://cloud1.utn.edu.ec/ords/f?p=224:3">TRANSPARENCIA</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/oficinaestudiante/">OFICINA DEL ESTUDIANTE</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2198">GRADO</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=2273">POSTGRADO</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="http://www.utn.edu.ec/colegio/">COLEGIO UTN</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=1892">INVESTIGACIÓN</a>
+                            </li>
+                            <li class="text-white sobre">
+                                <a class="text-white text-monospace text-decoration-none " target="_blank" href="https://www.utn.edu.ec/bibliotecavirtual/">BIBLIOTECA UNIVERSITARIA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4">
+                <h4 class="text-white">CONTÁCTANOS</h4>
+                <br>
+                <i class="fa fa-phone text-white"></i><strong class="text-white">  +593 (6) 2-997 800</strong>
+                <br>
+                <i class="fa fa-home text-white"></i><strong class="text-white">  Avenida 17 de Julio, 5-21, y Gral. José María Cordova. <p>
+                Código Postal: 100105  
+            </p>
+        <p>
+            Ibarra, Ecuador // <a class="text-decoration-none text-danger" target="_blank" href="https://www.utn.edu.ec/web/uniportal/?page_id=1904">ver mapa</a>
+        </p></strong>
+                <hr>
+                <i class="fa fa-envelope text-white"></i><strong class="text-white"> <a class="text-decoration-none text-danger" target="_blank" href="mailto:info@utn.edu.ec">info@utn.edu.ec</a>
+            </strong>
+
+            </div>
+
+
+
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script type="text/javascript">
+        var apiKey = 'apk.314cf0866d2cfed32fe2c5afb5a3e5ce8e4d01d2fd2b190b83e9099d30c179c4';
+        var searchRequest = {
+            'search': {
+                'dayOrNight': 'day',
+                'shape': {
+                    'type': 'Point',
+                    'coordinates': [-78.24437, 0.29376],
+                },
+                'onAmazon': true,
+            },
+            'page': 1,
+            'limit': 1,
+        };
+
+        $.post('https://gate.eos.com/api/lms/search/v2/landsat8?api_key=' + apiKey, JSON.stringify(searchRequest), renderScene, 'JSON');
+
+        function renderScene(response) {
+            console.log(response);
+            viewId = response.results[0].view_id;
+            sceneUrl = 'http://{a-d}-gate.eos.com/api/render/' + viewId + '/B4,B3,B2/{z}/{x}/{y}?api_key=' + apiKey;
+            new ol.Map({
+                target: 'map',
+                layers: [new ol.layer.Tile({
+                    source: new ol.source.XYZ({
+                        url: sceneUrl,
+                    }),
+                })],
+                view: new ol.View({
+                    center: ol.proj.fromLonLat([-78.24437, 0.29376]),
+                    zoom: 12,
+                    maxZoom: 19,
+                    minZoom: 7,
+                }),
+            });
+        }
+    </script>
+
+    <hr>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
